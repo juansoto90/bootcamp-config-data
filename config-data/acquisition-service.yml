@@ -1,0 +1,11 @@
+server:
+  port: 8086
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+customer:
+  web:
+    url: http://localhost:8080/customer
