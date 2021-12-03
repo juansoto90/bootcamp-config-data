@@ -14,7 +14,7 @@ spring:
           enabled: true
       routes:
         - id: customer-service
-          uri: http://customer/
+          uri: http://customers/
           predicates:
             - Path=/customer/**
         - id: product-service
