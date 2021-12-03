@@ -6,6 +6,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8082/eureka/
 
-customer:
+microservice:
   web:
-    url: http://customer-service/customer
+    customer: http://customer-service/customer
