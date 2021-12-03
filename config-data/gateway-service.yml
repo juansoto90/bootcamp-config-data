@@ -22,7 +22,7 @@ spring:
           predicates:
             - Path=/product/**
         - id: acquisition-service
-          uri: http://localhost:8086/
+          uri: lb://ACQUISITION-SERVICE
           predicates:
             - Path=/acquisition/**
         - id: account-service
