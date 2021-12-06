@@ -18,10 +18,10 @@ spring:
           predicates:
             - Path=/customer/**
         - id: acquisition-service
-          uri: lb://acquisition-service
+          uri: http://192.168.1.100:8086
           predicates:
             - Path=/acquisition/**
         - id: account-service
-          uri: lb://account-service
+          uri: http://192.168.1.100:8087
           predicates:
             - Path=/account/**
