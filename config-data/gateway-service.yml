@@ -14,7 +14,7 @@ spring:
           enabled: true
       routes:
         - id: customer-service
-          uri: lb://http://192.168.1.100:8084
+          uri: http://192.168.1.100:8084
           predicates:
             - Path=/customer/**
         - id: acquisition-service
