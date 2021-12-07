@@ -11,3 +11,4 @@ microservice:
     customer: http://customer-service/customer
     account: http://account-service/account
     creditcard: http://creditcard-service/creditcard
+    credit: http://credit-service/credit
