@@ -10,3 +10,4 @@ microservice:
   web:
     customer: http://customer-service/customer
     account: http://account-service/account
+    creditcard: http://creditcard-service/creditcard
