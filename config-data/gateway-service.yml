@@ -29,3 +29,7 @@ spring:
           uri: http://192.168.1.100:8087
           predicates:
             - Path=/account/**
+        - id: credit-service
+          uri: http://192.168.1.100:8088
+          predicates:
+            - Path=/credit/**
