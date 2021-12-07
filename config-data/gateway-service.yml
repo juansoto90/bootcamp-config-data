@@ -33,3 +33,7 @@ spring:
           uri: http://192.168.1.100:8088
           predicates:
             - Path=/credit/**
+        - id: operation-service
+          uri: http://192.168.1.100:8089
+          predicates:
+            - Path=/operation/**
