@@ -37,3 +37,7 @@ spring:
           uri: http://192.168.1.100:8089
           predicates:
             - Path=/deposit/**
+        - id: movement-service
+          uri: http://192.168.1.100:8090
+          predicates:
+            - Path=/movement/**
