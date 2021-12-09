@@ -9,3 +9,5 @@ eureka:
 microservice:
   web:
     customer: http://customer-service/customer
+    creditcard: http://creditcard-service/creditcard
+    association: http://association-service/association
