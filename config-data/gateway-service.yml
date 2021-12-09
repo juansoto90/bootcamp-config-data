@@ -41,3 +41,7 @@ spring:
           uri: http://192.168.1.100:8090
           predicates:
             - Path=/movement/**
+        - id: association-service
+          uri: http://192.168.1.100:8091
+          predicates:
+            - Path=/association/**
