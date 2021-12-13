@@ -10,4 +10,5 @@ eureka:
 microservice:
   web:
     account: http://account-service/account
+    creditcard: http://creditcard-service/creditcard
     
