@@ -10,5 +10,6 @@ eureka:
 microservice:
   web:
     account: http://account-service/account
-    creditcard: http://creditcard-service/creditcard
+    movement: http://movement-service/movement
+    
     
