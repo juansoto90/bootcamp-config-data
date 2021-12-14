@@ -1,8 +1,15 @@
 server:
-  port: 8098
+  port: 8094
   
 eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.1.100:8082/eureka/
       
+
+microservice:
+  web:
+    account: http://account-service/account
+    movement: http://movement-service/movement
+    association: http://association-service/association
+    creditcard: http://creditcard-service/creditcard
