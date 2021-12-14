@@ -9,3 +9,5 @@ eureka:
 microservice:
   web:
     association: http://association-service/association
+    account: http://account-service/account
+    movement: http://movement-service/movement
