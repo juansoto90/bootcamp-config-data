@@ -42,6 +42,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: customer
+                fallbackUri: forward:/customer/message
                 statusCodes: 500
         - id: creditcard-service
           uri: http://192.168.1.100:8085
