@@ -6,6 +6,27 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.1.100:8082/eureka/
       
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        sliding-window-size: 8
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 15s
+        permitted-number-of-calls-in-half-open-state: 10
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 3s
+    instances:
+      customer:
+        base-config: default
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 2s
+    instances:
+      customer:
+        base-config: default
+      
 spring:
   cloud:
     gateway:
@@ -17,6 +38,11 @@ spring:
           uri: http://192.168.1.100:8084
           predicates:
             - Path=/customer/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: customer
+                statusCodes: 500
         - id: creditcard-service
           uri: http://192.168.1.100:8085
           predicates:
